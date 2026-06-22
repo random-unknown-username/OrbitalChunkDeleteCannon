@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " E ",
+    "TFT",
+    " N "
+  ],
+  "key": {
+    "E": "minecraft:echo_shard",
+    "T": "minecraft:tnt",
+    "F": "minecraft:fishing_rod",
+    "N": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "chunkdeletecannon:chunk_delete_rod",
+    "count": 1
+  }
+}

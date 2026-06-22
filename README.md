@@ -13,8 +13,6 @@ A Fabric 1.21.11 mod that adds a one-use **Chunk Delete Rod**.
 
 Back up your world before using it. This is intentionally destructive.
 
-modrith url: https://modrinth.com/mod/orbital-chunk-delete-cannon
-
 ## Admin command
 
 ```mcfunction
@@ -28,19 +26,18 @@ The command requires permission level 2, so normal players cannot create rods th
 
 Shaped crafting recipe:
 
-<img width="871" height="297" alt="image" src="https://github.com/user-attachments/assets/50a2b605-b541-455a-bae3-0a460b5a4cc9" />
+```text
+ E 
+TFT
+ N 
+```
 
 - `E` = Echo Shard
 - `T` = TNT
 - `F` = Fishing Rod
 - `N` = Nether Star
 
-This makes the item survival-obtainable, but expensive enough that one chunk delete is hard.
-
-## Requirements
-
-- Fabric 19.3+
-- Only works on 1.21.11 (for now)
+This makes the item survival-obtainable, but expensive enough that one chunk delete is a big deal.
 
 ## Compatibility target
 
@@ -70,13 +67,21 @@ For a dedicated server, put the built jar and Fabric API in the server's `mods/`
 
 For singleplayer, put the built jar and Fabric API in the client's `mods/` folder.
 
-## Arch Linux build fix
+## Test checklist
 
-If system Gradle fails with `repository 'LoomLocalRemappedMods' was added by plugin`, make sure `settings.gradle` does **not** contain:
+I could not run a real Fabric 1.21.11 dedicated server or production client inside this sandbox, so do these before submitting:
 
-```gradle
-repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-```
+1. Run `./gradlew build` outside the development environment.
+2. Start a clean Fabric 1.21.11 dedicated server with only Fabric API and this mod.
+3. Join with a Fabric 1.21.11 client that has Fabric API and this mod.
+4. As an opped/admin user, run `/chunkrod give <your_name>`.
+5. As a non-opped user, confirm `/chunkrod give` fails.
+6. Give the rod to a non-opped user and confirm they can use it.
+7. Confirm one successful survival use consumes the rod.
+8. Confirm the recipe crafts the rod in survival.
+9. Confirm the targeted chunk is cleared and nearby chunks are not cleared.
+10. Repeat in a copied world, not your main save.
 
-Fabric Loom adds required repositories during setup, so this project leaves that strict repository mode disabled.
+## Project hygiene
 
+This project intentionally contains no mixins and no leftover sample classes or unrelated sample items/files.

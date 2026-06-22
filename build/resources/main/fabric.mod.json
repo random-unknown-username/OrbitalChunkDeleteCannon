@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "chunkdeletecannon",
+  "version": "1.0.0",
+  "name": "Chunk Delete Cannon",
+  "description": "Adds a one-use fishing rod that clears the targeted chunk on the server.",
+  "authors": ["Gautam Hardat"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.hardat.chunkdeletecannon.ChunkDeleteCannonMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
