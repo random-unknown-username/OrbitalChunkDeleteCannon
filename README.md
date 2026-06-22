@@ -13,6 +13,8 @@ A Fabric 1.21.11 mod that adds a one-use **Chunk Delete Rod**.
 
 Back up your world before using it. This is intentionally destructive.
 
+Modrith mod: https://modrinth.com/mod/orbital-chunk-delete-cannon
+
 ## Admin command
 
 ```mcfunction
@@ -26,18 +28,14 @@ The command requires permission level 2, so normal players cannot create rods th
 
 Shaped crafting recipe:
 
-```text
- E 
-TFT
- N 
-```
+<img width="871" height="297" alt="image" src="https://github.com/user-attachments/assets/8f8f46ce-c576-40cc-ae48-78354a1a1673" />
 
 - `E` = Echo Shard
 - `T` = TNT
 - `F` = Fishing Rod
 - `N` = Nether Star
 
-This makes the item survival-obtainable, but expensive enough that one chunk delete is a big deal.
+This makes the item survival-obtainable, but expensive enough that one chunk delete is hard to do.
 
 ## Compatibility target
 
