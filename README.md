@@ -13,6 +13,8 @@ A Fabric 1.21.11 mod that adds a one-use **Chunk Delete Rod**.
 
 Back up your world before using it. This is intentionally destructive.
 
+modrith url: https://modrinth.com/mod/orbital-chunk-delete-cannon
+
 ## Admin command
 
 ```mcfunction
